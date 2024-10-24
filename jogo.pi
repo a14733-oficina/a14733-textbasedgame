@@ -1,0 +1,25 @@
+
+def introducao():
+    print("Ola bem vindo ao Sai da floresta.")
+    nome= input("Qual é o teu nome:")
+    print(f"{nome} o teu objetivo é escapar da floresta com vida.")
+introducao()
+print("Acordas um dia depois sem saber muito bem o que aconteceu, a unica coisa que tu  sabes é que tiveste um acidente na estrada.")
+escolha = input("Andas um pouco e encontras dois caminhos escolhes entre esquerda ou direita(esq/dir): ")
+if escolha == "esq":
+    bau = input("Escolhes o caminho da esquerda, andas por algum tempo e encontras um baú quere abrir(s/n):")
+    if bau == "s":
+        print("Abres o granda baú e vez muito ouro,mas era uma armadilha e um grupo de Barbaros atacaram-te por traz.FIM DA LINHA")
+        continuar = True
+        while continuar:
+            resposta = input("Queres jogar de novo? (sim/não): ")
+            if resposta.lower() != "sim":
+                continuar = False
+    else: 
+        print("Não abriste o baú e como já não ha mais caminho voltas para traz.")
+elif escolha == "dir":
+   print("Andas mais alguns minutos e tudo parece calmo,até que ouves uns barulhos e vês que são três goblins tens de lutar com eles para passar. ")
+import random
+if i <= 5:
+                print("Não tens muita força eles juntaram-se atacaram-te.FIM DA LINHA ")
+                print(i)
