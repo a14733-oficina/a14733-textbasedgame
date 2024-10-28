@@ -1,25 +1,50 @@
-
-def introducao():
+def introducao():#defenição da intro
     print("Ola bem vindo ao Sai da floresta.")
     nome= input("Qual é o teu nome:")
     print(f"{nome} o teu objetivo é escapar da floresta com vida.")
 introducao()
 print("Acordas um dia depois sem saber muito bem o que aconteceu, a unica coisa que tu  sabes é que tiveste um acidente na estrada.")
+
 escolha = input("Andas um pouco e encontras dois caminhos escolhes entre esquerda ou direita(esq/dir): ")
 if escolha == "esq":
-    bau = input("Escolhes o caminho da esquerda, andas por algum tempo e encontras um baú quere abrir(s/n):")
-    if bau == "s":
-        print("Abres o granda baú e vez muito ouro,mas era uma armadilha e um grupo de Barbaros atacaram-te por traz.FIM DA LINHA")
-        continuar = True
-        while continuar:
-            resposta = input("Queres jogar de novo? (sim/não): ")
-            if resposta.lower() != "sim":
-                continuar = False
-    else: 
-        print("Não abriste o baú e como já não ha mais caminho voltas para traz.")
+    print("\nEscolhes o caminho da esquerda, andas por algum tempo e encontras um baú.")
+    print("\nAbres o granda baú e vez muito ouro,mas era uma armadilha e um grupo de Barbaros atacaram-te por traz.FIM DA LINHA")
+    continuar = True
+    while continuar:
+        resposta = input("Queres jogar de novo? (sim/não): ")
+        if resposta.lower() != "sim":
+            continuar = False
+          
+
 elif escolha == "dir":
-   print("Andas mais alguns minutos e tudo parece calmo,até que ouves uns barulhos e vês que são três goblins tens de lutar com eles para passar. ")
+   print("\nAndas mais alguns minutos e tudo parece calmo,até que ouves uns barulhos e vês que são três goblins tens de lutar com eles para passar. ")
+   print("\n Se tiveres a sorte de ter mais de 5 na roleta salvas-te.Boa sorte.")
 import random
-if i <= 5:
-                print("Não tens muita força eles juntaram-se atacaram-te.FIM DA LINHA ")
-                print(i)
+
+aleratorio = random.randrange(1, 10)
+import time
+time.sleep(3) # Sleep for 3 seconds
+print(aleratorio)
+if aleratorio< 5:
+     print("Não tens muita força,eles juntaram-se atacaram-te.FIM DA LINHA ")
+     continuar = True
+     while continuar:
+        resposta = input("Queres jogar de novo? (sim/não): ")
+        if resposta.lower() != "sim":
+            continuar = False
+else:
+    print("Acertas-te num goblin e os outros fugiram.")
+    mochila=input("\nAo eles fugirem caiu-lhe uma mochila das costas queres apanhar(s,n): ")
+    if mochila == "s":
+        thislist = ["poção de cura", "faca", "garrafa de água"]#o que esta na mochila
+        print(f"Na mochila está",thislist)#print da lista
+print("\n Andas muito tempo e encontras o teu último obstaculo na tua procura pela  saida da floresta.")
+print("\nEncontras um vila de elfos tu vais em direcção á vila.Chegas a vila e um dos elfos pergunta-te:Elfo:O que fazes aqui?:Estou perdido podes dar-me a indicação da saida")
+print("\nTu:Estou perdido podes dar-me a indicação da saida")
+print("\nElfo:Claro que posso mas tem um preço.")
+print("\nTu:E qual é esse preço?")
+print("\nElfo:O preço é 100£.")
+trabalho=input("\nComo não tens opção melhor e o teu dinheiro desapareceu tens apenas 2 opções de trabalhos na vila,gladiador em que apenas uma batalhas ganhas o dinheiro,mas é perigoso,ou ferreiro em que tens de trabalhar por uma semana,mas é mais seguro.Qual escolhes (g(gladiador) ou f(ferreiro): ")
+if trabalho == "g":
+    luta=input("Já tens a tua batalha marcada,tives-te azar e a tua luta é contra o maior gladiador da cidade,que nunca perdeu uma batalha.Para o venceres vais ter que ter um numero maior que 5 en")
+
