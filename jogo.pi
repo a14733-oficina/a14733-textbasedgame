@@ -9,11 +9,11 @@ escolha = input("Andas um pouco e encontras dois caminhos escolhes entre esquerd
 if escolha == "esq":
     print("\nEscolhes o caminho da esquerda, andas por algum tempo e encontras um baú.")
     print("\nAbres o granda baú e vez muito ouro,mas era uma armadilha e um grupo de Barbaros atacaram-te por traz.FIM DA LINHA")
-    continuar = True
+    continuar = True 
     while continuar:
         resposta = input("Queres jogar de novo? (sim/não): ")
         if resposta.lower() != "sim":
-            continuar = False
+            continuar = exit()
           
 
 elif escolha == "dir":
@@ -31,20 +31,18 @@ if aleratorio< 5:
      while continuar:
         resposta = input("Queres jogar de novo? (sim/não): ")
         if resposta.lower() != "sim":
-            continuar = False
+            continuar = exit()
+
 else:
     print("Acertas-te num goblin e os outros fugiram.")
-    mochila=input("\nAo eles fugirem caiu-lhe uma mochila das costas queres apanhar(s,n): ")
-    if mochila == "s":
-        thislist = ["poção de cura", "faca", "garrafa de água"]#o que esta na mochila
-        print(f"Na mochila está",thislist)#print da lista
-print("\n Andas muito tempo e encontras o teu último obstaculo na tua procura pela  saida da floresta.")
-print("\nEncontras um vila de elfos tu vais em direcção á vila.Chegas a vila e um dos elfos pergunta-te:Elfo:O que fazes aqui?:Estou perdido podes dar-me a indicação da saida")
-print("\nTu:Estou perdido podes dar-me a indicação da saida")
-print("\nElfo:Claro que posso mas tem um preço.")
-print("\nTu:E qual é esse preço?")
-print("\nElfo:O preço é 100£.")
-trabalho=input("\nComo não tens opção melhor e o teu dinheiro desapareceu tens apenas 2 opções de trabalhos na vila,gladiador em que apenas uma batalhas ganhas o dinheiro,mas é perigoso,ou ferreiro em que tens de trabalhar por uma semana,mas é mais seguro.Qual escolhes (g(gladiador) ou f(ferreiro): ")
-if trabalho == "g":
-    luta=input("Já tens a tua batalha marcada,tives-te azar e a tua luta é contra o maior gladiador da cidade,que nunca perdeu uma batalha.Para o venceres vais ter que ter um numero maior que 5 en")
-
+    mapa=input("\nDo goblin que matas-te cai um mapa,nele vês dois caminhos podes ir pelo norte ou pelo sul(n ou s): ")
+    if mapa == "n":
+        print("Foste pelo norte ao anda vês uma grande cidade,que não sabes como não a viste de dentro da floresta.")
+    elif mapa == "s":
+        print ("Ao andares vês um largo sem árvores pensas que escapas-te e andas sobre a areia mas não sabias que não era normal, era uma areia movediça e ficas-te preso até morrer.FIM")
+        continuar = True
+    while continuar:
+            resposta = input("Queres jogar de novo? (sim/não): ")
+            if resposta.lower() != "sim":
+                continuar = exit()
+ print("Parabéns por completares o meu jogo e conseguir sair da floresta,espero que te tenhas te divertido!") 
